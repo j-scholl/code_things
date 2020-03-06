@@ -23,7 +23,7 @@ public class RandomMooValue {
         String temp = String.valueOf(guess);
         for (int i = 0; i <= temp.length(); i++) {
             for (int j = 0; j <= secretvalue.length(); j++) {
-                if (temp.charAt(i) == secretvalue.charAt(j)) {  // if its the same value for one of the values...
+                if (String.valueOf(temp.charAt(i)).equals(String.valueOf(secretvalue.charAt(j)))) {  // if its the same value for one of the values...
                     if (i == j) bigMoo++;     // ...and if its in the same place as that value... increment bigMoo.
                 }
             }
@@ -43,7 +43,7 @@ public class RandomMooValue {
         String temp = String.valueOf(guess);
         for (int i = 0; i <= temp.length(); i++) {
             for (int j = 0; j <= secretvalue.length(); j++) {
-                if (temp.charAt(i) == secretvalue.charAt(j)) {   // if its the same value for one of the values...
+                if (String.valueOf(temp.charAt(i)).equals(String.valueOf(secretvalue.charAt(j)))) {   // if its the same value for one of the values...
                     if (i != j) littleMoo++;    // ...and if its NOT in the same place as that value... increment littleMoo.
                 }
             }
